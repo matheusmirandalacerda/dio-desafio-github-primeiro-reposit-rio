@@ -2863,4 +2863,21 @@ Sul,Rio Grande do Sul,Vila Lângaro,43,432335,43018,Região 18 - Araucárias,209
 Sul,Rio Grande do Sul,Vila Maria,43,432340,43017,Região 17 - Planalto,4358
 Sul,Rio Grande do Sul,Vista Alegre do Prata,43,432360,43025,Região 25 - Vinhedos e Basalto,1561
 Sul,Rio Grande do Sul,Westfália,43,432377,43030,Região 30 - Vale da Luz,3014
-Sul,Rio Grande do Sul,Xangri-lá,43,432380,43004,Região 04 - Belas Praias,16408
+Sul,Rio Grande do Sul,Xangri-lá,43,432380,43004,Região 04 - Belas Praias,16408;
+
+
+select
+	sum(population)
+from "population"."population";
+
+select city, population
+from "population"."population"
+where city='Foz do Iguaçu';
+
+select * from "population"."population" limit 10;
+
+select region,
+	sum(population)
+from "population"."population"
+where region='Sul'
+group by region;
